@@ -18,6 +18,7 @@ def main(e, path):
         raise click.UsageError("Missing argument 'PATH'. You must specify a file path.")
     try:
         retPath = uploadFile(path, e)
+        e = int(e)
         print(f"Image Uploded at {retPath}")
     except Exception as e:
         print(e)
